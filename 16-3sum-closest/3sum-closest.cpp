@@ -12,9 +12,9 @@ public:
                if(abs(target-l)<abs(target-ans)){
                    ans=l;
                }
-               if(nums[i]+nums[j]+nums[k]>target){
+               if(l>target){
                    k--;
-               }else if(nums[i]+nums[j]+nums[k]<target){
+               }else if(l<target){
                    j++;
                }else return target;
            }

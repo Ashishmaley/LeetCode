@@ -1,7 +1,8 @@
 class Solution {
 public:
     int maximalNetworkRank(int n, vector<vector<int>>& roads) {
-        vector<unordered_set<int> >v(n);
+       // vector<unordered_set<int> >v(n);
+        map<int,unordered_set<int> >v;
         for(int i=0;i<roads.size();i++){
             v[roads[i][0]].insert(roads[i][1]);
             v[roads[i][1]].insert(roads[i][0]);
@@ -10,7 +11,7 @@ public:
         for(int i=0;i<n;i++){
             for(int j=i+1;j<n;j++){
                 int curr=v[i].size()+v[j].size();
-                if(v[i].find(j)!=v[i].end()){
+                if(v[i].count(j)){
                     curr--;
                 }
                 ans= max(ans,curr);

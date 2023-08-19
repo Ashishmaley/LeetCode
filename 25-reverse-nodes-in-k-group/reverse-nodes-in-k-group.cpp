@@ -20,14 +20,14 @@ ListNode* solve(ListNode* head,int k){
         ListNode* next=curr->next;
         int n=k;
         int count=0;
-        ListNode* demo=curr;
-        while(demo!=nullptr){
+        while(curr!=nullptr){
             count++;
-            demo=demo->next;
+            curr=curr->next;
         }
         if(count<k){
             return head;
         }
+        curr=head;
         while(n>0&&(next!=nullptr)){
             next=curr->next;
             curr->next=prev;

@@ -2,9 +2,8 @@ class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
         int n=nums.size();
-        if(n<1)return {};
+        if(n<1)return 0;
         int i=0,j=n-1;
-        int count=0;
         while(i<=j){
             if(nums[i]==val){
                 while(j>=0&&nums[j]==val){
@@ -17,9 +16,8 @@ public:
             }
             else{    
                 i++;
-                count++;
                 }
         }
-        return count;   
+        return i;   
     }
 };

@@ -1,7 +1,7 @@
 class MyHashMap {
 public:
 
-    int a[1000005];
+    int a[1000001];
     
     MyHashMap() {
         memset(a,-1, sizeof(a));

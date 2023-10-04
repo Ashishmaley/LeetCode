@@ -1,8 +1,8 @@
 class MyHashMap {
 public:
-    int arr[1000001];
+    vector<int>arr;
     MyHashMap() {
-        std::fill(arr,arr+1000001, -1);
+        arr = vector<int> (1000001,-1);
     }
     
     void put(int key, int value) {
